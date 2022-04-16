@@ -37,7 +37,7 @@ BINARY="$HOME/go/bin/archwayd"
 # Example: SLEEPING_TIME=$((5*60))
 # Example: SLEEPING_TIME="30"
 SLEEPING_TIME=$((60*60))
-DENOM="aphoton"
+DENOM="utorii"
 GAS_PRICES="--gas=auto --fees 500${DENOM}"
 ##################
 # DO NOT MODIFY! #
