@@ -70,7 +70,7 @@ After=network-online.target
 [Service]
 User=$USER
 WorkingDirectory=$HOME/cosmos-autostaking
-ExecStart=$HOME/cosmos-autostaking/auto_delegate.sh -p $HOME/cosmos-autostaking/profiles/.desmos_profile
+ExecStart=$HOME/cosmos-autostaking/auto_delegate.sh -p $HOME/cosmos-autostaking/profiles/.archway_profile
 
 [Install]
 WantedBy=multi-user.target
