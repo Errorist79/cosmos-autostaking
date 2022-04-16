@@ -1,0 +1,50 @@
+# Archway Keyring Backend ("test", "file", "os" or "memory")
+# Example: KEYRING_BACKEND="test"
+# You can reimport your wallet with desired backend-type
+# (`archwayd keys add archwaywalletname --recover --keyring-backend test`)
+KEYRING_BACKEND="test"
+# Password
+# Required if keyring-backend is "file" or "os"
+PASSWD=""
+# archway Wallet Name (`archway keys list`)
+# Example: DELEGATOR_NAME="EZStaking"
+DELEGATOR_NAME="validator"
+# archway Wallet Address (`archwayd keys show archwaywalletname -a`)
+# Example: DELEGATOR="archway1l2p7yz0rflk93rxvfrqqaekjqkjpappn36kfya"
+DELEGATOR="archway1l2p7yz0rflk93rxvfrqqaekjqkjpappn36kfya"
+# archway Validator Address
+# Example: VALIDATOR="archwayvaloper1l2p7yz0rflk93rxvfrqqaekjqkjpappn37ltf5"
+VALIDATOR="archwayvaloper1l2p7yz0rflk93rxvfrqqaekjqkjpappn37ltf5"
+# Current Archway Chain ID
+CHAIN_ID="torii-1"
+##########################################################
+# In case you customized the archway Node configuration,    #
+# you will want to edit this below parameters.           #
+##########################################################
+# The IP of your archway Node
+NODE_IP="127.0.0.1"
+# The port of your archway Node
+NODE_PORT="26657"
+# The home of your archway Node
+NODE_HOME="$HOME/.archway/"
+# The path to your archway binary
+# To get the full path to your archway binary you can use `whereis archway` and replace the below value by.
+BINARY="$HOME/go/bin/archwayd"
+####################
+# MODIFY FOR TESTS #
+####################
+# Time to sleep in sec between two delegations
+# Example: SLEEPING_TIME=$((5*60))
+# Example: SLEEPING_TIME="30"
+SLEEPING_TIME=$((60*60))
+DENOM="aphoton"
+GAS_PRICES="--gas=auto --fees 500${DENOM}"
+##################
+# DO NOT MODIFY! #
+##################
+# Depending on Cosmos SDK version
+# - ACCOUNT     $binary query account
+# - BANK        $binary query bank balances
+BALANCES_FROM="BANK"
+SDETAILS="--chain-id ${CHAIN_ID} --node tcp://${NODE_IP}:${NODE_PORT} --home ${NODE_HOME}"
+DETAILS="${SDETAILS} --keyring-backend ${KEYRING_BACKEND}"
