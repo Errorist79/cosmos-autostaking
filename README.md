@@ -89,5 +89,5 @@ sudo systemctl stop autostaking
 
 #### Manual Delegation
 ```bash
-$HOME/cosmos-autostaking/delegate_manually.sh -p $HOME/cosmos-autostaking/profiles/.desmos_profile
+$HOME/cosmos-autostaking/delegate_manually.sh -p $HOME/cosmos-autostaking/profiles/.archway_profile
 ```
