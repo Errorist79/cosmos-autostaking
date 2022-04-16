@@ -8,12 +8,12 @@ KEYRING_BACKEND="test"
 PASSWD=""
 # archway Wallet Name (`archway keys list`)
 # Example: DELEGATOR_NAME="EZStaking"
-DELEGATOR_NAME="validator"
+DELEGATOR_NAME="denemekey"
 # archway Wallet Address (`archwayd keys show archwaywalletname -a`)
 # Example: DELEGATOR="archway1l2p7yz0rflk93rxvfrqqaekjqkjpappn36kfya"
-DELEGATOR="archway1l2p7yz0rflk93rxvfrqqaekjqkjpappn36kfya"
+DELEGATOR="archway13v5we8eectvxnwlqnug2h2r5u36u7j2fr2arx5"
 # archway Validator Address
-# Example: VALIDATOR="archwayvaloper1l2p7yz0rflk93rxvfrqqaekjqkjpappn37ltf5"
+# Example: VALIDATOR="archwayvaloper13v5we8eectvxnwlqnug2h2r5u36u7j2frw5pta"
 VALIDATOR="archwayvaloper1l2p7yz0rflk93rxvfrqqaekjqkjpappn37ltf5"
 # Current Archway Chain ID
 CHAIN_ID="torii-1"
@@ -38,7 +38,7 @@ BINARY="$HOME/go/bin/archwayd"
 # Example: SLEEPING_TIME="30"
 SLEEPING_TIME=$((60*60))
 DENOM="utorii"
-GAS_PRICES="--gas=auto --fees 500${DENOM}"
+GAS_PRICES="--gas=auto"
 ##################
 # DO NOT MODIFY! #
 ##################
